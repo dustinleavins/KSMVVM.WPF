@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSMVVM.WPF", "KSMVVM.WPF\KSMVVM.WPF.csproj", "{C67AE4AA-052D-41E2-8BA1-3D4E18E258F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSMVVM.WPF.Tests", "KSMVVM.WPF.Tests\KSMVVM.WPF.Tests.csproj", "{1F35520B-3A74-45EF-B0AF-8216ACCB7083}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E92B244B-7F2F-480D-BA0A-15F93C1B35B1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C67AE4AA-052D-41E2-8BA1-3D4E18E258F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67AE4AA-052D-41E2-8BA1-3D4E18E258F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67AE4AA-052D-41E2-8BA1-3D4E18E258F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67AE4AA-052D-41E2-8BA1-3D4E18E258F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F35520B-3A74-45EF-B0AF-8216ACCB7083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F35520B-3A74-45EF-B0AF-8216ACCB7083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F35520B-3A74-45EF-B0AF-8216ACCB7083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F35520B-3A74-45EF-B0AF-8216ACCB7083}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
