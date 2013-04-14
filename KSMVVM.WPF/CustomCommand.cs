@@ -7,16 +7,26 @@ using System.Windows.Input;
 namespace KSMVVM.WPF
 {
     /// <summary>
-    /// Implementation of ICommand that invokes delegates
-    /// (that take an object parameter) when calling
-    /// Execute or CanExecute and has a
-    /// CanExecuteChanged implementation allowing manual updates
+    /// 'Custom' implementation of ICommand.
     /// </summary>
     /// <remarks>
-    /// This is similar to the BasicCommand class, but that class
-    /// implements ICommand.CanExecuteChanged with a hack
-    /// that may cause performance problems.
+    /// This is similar to the BasicCommand class, but with two major
+    /// differences:
+    /// <list type="bullet">
+    /// <item>
+    ///     <descripton>
+    ///     BasicCommand implements ICommand.CanExecuteChanged with a hack
+    ///     that may cause performance problems.
+    ///     </descripton>
+    /// </item>
     /// 
+    /// <item>
+    ///     <description>
+    ///     CustomCommand requires delegates that can take an object as
+    ///     a parameter.
+    ///     </description>
+    /// </item>
+    /// </list>
     /// If you are writing new code (and not converting back-end code
     /// to MVVM), this is the recommended ICommand implementation to use.
     /// </remarks>

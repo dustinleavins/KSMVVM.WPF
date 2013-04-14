@@ -8,8 +8,7 @@ using System.Windows.Controls;
 namespace KSMVVM.WPF
 {
     /// <summary>
-    /// Interface for classes implementing Page
-    /// navigation functionality
+    /// Interface for classes implementing Page navigation functionality.
     /// </summary>
     public interface IAppNavigationService
     {

@@ -7,8 +7,8 @@ using System.Windows.Controls;
 namespace KSMVVM.WPF
 {
     /// <summary>
-    /// Implementation of IAppNavigationService that
-    /// use NavigationService property of a Page instance
+    /// Implementation of IAppNavigationService that uses the
+    /// NavigationService property of a Page instance
     /// for navigation.
     /// </summary>
     public sealed class PageNavigationService : IAppNavigationService

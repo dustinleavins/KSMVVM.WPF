@@ -11,7 +11,7 @@ namespace KSMVVM.WPF.Testing
     /// </summary>
     /// <remarks>
     /// If you are not using a mocking framework, you can inject an instance
-    /// of this class into nav-using view models and check nav functionality.
+    /// of this class into View Models and check nav functionality.
     /// </remarks>
     public sealed class MockAppNavigationService : IAppNavigationService
     {
@@ -100,11 +100,20 @@ namespace KSMVVM.WPF.Testing
             return accessCountLog.ContainsKey(pageType) ? accessCountLog[pageType] : 0;
         }
         
+        /// <summary>
+        /// Gets the number of requests made for a page of
+        /// the specified type.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public int RequestCountFor<T>()
         {
             return RequestCountFor(typeof(T));
         }
 
+        /// <summary>
+        /// Gets the total number of all (non "go back") navigation requests.
+        /// </summary>
         public int RequestCount
         {
             get
@@ -113,6 +122,9 @@ namespace KSMVVM.WPF.Testing
             }
         }
         
+        /// <summary>
+        /// Gets the total number of "go back" requests.
+        /// </summary>
         public int GoBackRequestCount
         {
             get

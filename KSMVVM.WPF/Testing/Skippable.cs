@@ -19,16 +19,31 @@ namespace KSMVVM.WPF.Testing
         private static Lazy<SkippableData> instance =
             new Lazy<SkippableData>(() => new SkippableData());
 
+        /// <summary>
+        /// Invokes action unless Skippable is currently set to 'skip mode'.
+        /// </summary>
+        /// <param name="action"></param>
         public static void Do(Action action)
         {
             instance.Value.Do(action);
         }
 
+        /// <summary>
+        /// Puts Skippable into 'skip mode'; Do(action) does not invoke
+        /// the action.
+        /// </summary>
+        /// <remarks>
+        /// Skip() is designed to be used in a using() block.
+        /// </remarks>
+        /// <returns>A disposable object for use in a using() block</returns>
         public static SkipDisposable Skip()
         {
             return new SkipDisposable(instance.Value);
         }
 
+        /// <summary>
+        /// Class that does the work of Skippable.Do(action).
+        /// </summary>
         public class SkippableData
         {
             public bool Skip
@@ -61,6 +76,9 @@ namespace KSMVVM.WPF.Testing
             private bool skip;
         }
 
+        /// <summary>
+        /// Class that does the work of Skippable.Skip()
+        /// </summary>
         public sealed class SkipDisposable : IDisposable
         {
             public SkipDisposable(SkippableData instance)

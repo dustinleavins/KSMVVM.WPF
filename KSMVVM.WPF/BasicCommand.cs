@@ -7,16 +7,14 @@ using System.Windows.Input;
 namespace KSMVVM.WPF
 {
     /// <summary>
-    /// Implementation of ICommand that invokves delegates
-    /// when calling Execute or CanExecute and uses a hack
-    /// to make updates easier.
+    /// 'Basic' implementation of ICommand.
     /// </summary>
     /// <remarks>
     /// This class implements ICommand.CanExecuteChanged by just forwarding
     /// add/remove requests to CommandManager.RequerySuggested.
     /// CanExecuteDelegate will be constantly invoked.
     /// 
-    /// This is similar to the CustomCommand class, but that class
+    /// This class is similar to the CustomCommand class, but that class
     /// has an ICommand.CanExecuteChanged implementation that allows
     /// manual updates.
     /// 
@@ -97,6 +95,14 @@ namespace KSMVVM.WPF
             set;
         }
 
+        /// <summary>
+        /// Generates a command instance that just calls nav.GoBack().
+        /// </summary>
+        /// <remarks>
+        /// There is a strong chance that this will be removed in the future.
+        /// </remarks>
+        /// <param name="nav"></param>
+        /// <returns></returns>
         public static BasicCommand GoBack(IAppNavigationService nav)
         {
             return new BasicCommand(() =>
