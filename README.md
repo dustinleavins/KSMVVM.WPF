@@ -7,7 +7,7 @@ This particular framework is designed for helping dev convert code-behind projec
 Here are some bullet points.
 
 * ViewModel-level navigation capability
-* No messaging component (yet)
+* Very lightweight messaging (pass an id and a single action to the Register method)
 * UI-specific code can go in the ViewModel if wrapped using the Skippable.Do() method
 * Two ICommand implementations (BasicCommand is easier for conversions, CustomCommand is better for new code)
 

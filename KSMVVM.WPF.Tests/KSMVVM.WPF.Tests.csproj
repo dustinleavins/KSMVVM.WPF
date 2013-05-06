@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicCommandTests.cs" />
+    <Compile Include="BasicMessengerTests.cs" />
     <Compile Include="CustomCommandTests.cs" />
     <Compile Include="Examples\ViewModelTests.cs" />
     <Compile Include="MockAppNavigationServiceTests.cs" />
