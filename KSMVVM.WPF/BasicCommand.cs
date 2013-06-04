@@ -29,6 +29,7 @@ namespace KSMVVM.WPF
             ExecuteHandler = () => { };
             CanExecuteHandler = () => true;
         }
+
         public BasicCommand(Action executeAction)
         {
             ExecuteHandler = executeAction;
@@ -93,22 +94,6 @@ namespace KSMVVM.WPF
         {
             get;
             set;
-        }
-
-        /// <summary>
-        /// Generates a command instance that just calls nav.GoBack().
-        /// </summary>
-        /// <remarks>
-        /// There is a strong chance that this will be removed in the future.
-        /// </remarks>
-        /// <param name="nav"></param>
-        /// <returns></returns>
-        public static BasicCommand GoBack(IAppNavigationService nav)
-        {
-            return new BasicCommand(() =>
-            {
-                nav.GoBack();
-            });
         }
     }
 }
