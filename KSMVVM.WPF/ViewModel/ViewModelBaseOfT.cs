@@ -10,6 +10,10 @@ namespace KSMVVM.WPF.ViewModel
     /// </summary>
     public abstract class ViewModelBase<T> : ViewModelBase
     {
+        public ViewModelBase()
+        {
+        }
+
         public ViewModelBase(T model)
         {
             Model = model;
