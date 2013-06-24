@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Copyright (c) 2013 Dustin Leavins
+// See the file 'LICENSE.txt' for copying permission.
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
