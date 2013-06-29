@@ -57,25 +57,13 @@ namespace KSMVVM.WPF
         public bool CanExecute(object parameter)
         {
             var canExecute = CanExecuteHandler;
-
-            if (canExecute != null)
-            {
-                return canExecute.Invoke(parameter);
-            }
-            else
-            {
-                return true;
-            }
+            return canExecute.Invoke(parameter);
         }
 
         public void Execute(object parameter)
         {
             var execute = ExecuteHandler;
-
-            if (execute != null)
-            {
-                execute.Invoke(parameter);
-            }
+            execute.Invoke(parameter);
         }
 
         /// <summary>

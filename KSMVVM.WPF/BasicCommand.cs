@@ -47,15 +47,7 @@ namespace KSMVVM.WPF
         public bool CanExecute(object unused)
         {
             var canExecute = CanExecuteHandler;
-
-            if (canExecute != null)
-            {
-                return canExecute.Invoke();
-            }
-            else
-            {
-                return true;
-            }
+            return canExecute.Invoke();
         }
 
         public event EventHandler CanExecuteChanged
@@ -73,11 +65,7 @@ namespace KSMVVM.WPF
         public void Execute(object unused)
         {
             var execute = ExecuteHandler;
-
-            if (execute != null)
-            {
-                execute.Invoke();
-            }
+            execute.Invoke();
         }
 
         /// <summary>
