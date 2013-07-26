@@ -2,6 +2,7 @@
 // See the file 'LICENSE.txt' for copying permission.
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Windows.Controls;
@@ -73,6 +74,7 @@ namespace KSMVVM.WPF.Testing
         /// navigate to a page of the specified type?
         /// </summary>
         /// <returns></returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1004")]
         public bool ReceivedRequestFor<T>()
         {
             return ReceivedRequestFor(typeof(T));
@@ -108,6 +110,7 @@ namespace KSMVVM.WPF.Testing
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1004")]
         public int RequestCountFor<T>()
         {
             return RequestCountFor(typeof(T));

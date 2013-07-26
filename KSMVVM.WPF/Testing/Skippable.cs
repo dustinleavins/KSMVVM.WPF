@@ -42,59 +42,5 @@ namespace KSMVVM.WPF.Testing
         {
             return new SkipDisposable(instance.Value);
         }
-
-        /// <summary>
-        /// Class that does the work of Skippable.Do(action).
-        /// </summary>
-        public class SkippableData
-        {
-            public bool Skip
-            {
-                get
-                {
-                    lock (skipLock)
-                    {
-                        return skip;
-                    }
-                }
-                set
-                {
-                    lock (skipLock)
-                    {
-                        skip = value;
-                    }
-                }
-            }
-
-            public void Do(Action action)
-            {
-                if (!Skip)
-                {
-                    action.Invoke();
-                }
-            }
-
-            private object skipLock = new object();
-            private bool skip;
-        }
-
-        /// <summary>
-        /// Class that does the work of Skippable.Skip()
-        /// </summary>
-        public sealed class SkipDisposable : IDisposable
-        {
-            public SkipDisposable(SkippableData instance)
-            {
-                _instance = instance;
-                _instance.Skip = true;
-            }
-
-            public void Dispose()
-            {
-                _instance.Skip = false;
-            }
-
-            private SkippableData _instance;
-        }
     }
 }

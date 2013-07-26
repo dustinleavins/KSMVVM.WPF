@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<Dictionary>
+  <Words>
+    <Recognized>
+      <Word>Skippable</Word>
+    </Recognized>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>KSMVVM</Acronym>
+      <Acronym>WPF</Acronym>
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

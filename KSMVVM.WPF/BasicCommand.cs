@@ -44,7 +44,7 @@ namespace KSMVVM.WPF
             CanExecuteHandler = canExecuteFunc;
         }
 
-        public bool CanExecute(object unused)
+        public bool CanExecute(object parameter)
         {
             var canExecute = CanExecuteHandler;
             return canExecute.Invoke();
@@ -62,7 +62,7 @@ namespace KSMVVM.WPF
             }
         }
 
-        public void Execute(object unused)
+        public void Execute(object parameter)
         {
             var execute = ExecuteHandler;
             execute.Invoke();
