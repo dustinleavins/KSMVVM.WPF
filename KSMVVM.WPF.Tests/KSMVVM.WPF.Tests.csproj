@@ -63,7 +63,6 @@
     <Compile Include="Examples\ViewModelTests.cs" />
     <Compile Include="MockAppNavigationServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkippableTests.cs" />
     <Compile Include="ViewModelBaseTests.cs" />
   </ItemGroup>
   <ItemGroup>

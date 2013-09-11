@@ -30,11 +30,6 @@ namespace KSMVVM.WPF.Tests.Examples
                 Cancel.ExecuteHandler = () =>
                 {
                     Cancelling = true;
-                    Skippable.Do(() =>
-                                 {
-                                     MessageBox.Show("You shouldn't see this while testing.");
-                                     Application.Current.MainWindow.Close();
-                                 });
                 };
             }
             
@@ -87,20 +82,7 @@ namespace KSMVVM.WPF.Tests.Examples
         {
             MockAppNavigationService nav = new MockAppNavigationService();
             var target = new FirstRunViewModel(nav);
-            
-            // There is some UI-specific code in Cancel's handler, but
-            // it's wrapped using Skippable.Do().
-            // Using Skippable.Skip() like this allows you to skip
-            // 'Skippable' code.
-            
-            using (Skippable.Skip())
-            {
-                target.Cancel.Execute(null);
-            }
-            
-            // The Cancel command still sets the Cancelling
-            // property because it occurs outside of the
-            // Skippable code.
+            target.Cancel.Execute(null);
             Assert.IsTrue(target.Cancelling);
         }
     }
