@@ -9,13 +9,21 @@ using System.Text;
 namespace KSMVVM.WPF.Messaging
 {
     /// <summary>
-    /// Basic messenging class.
+    /// Basic messaging class.
     /// </summary>
+    /// <remarks>
+    /// This class works with string IDs. Only the ID is sent as part
+    /// of messaging.
+    /// </remarks>
     public sealed class BasicMessenger
     {
         /// <summary>
-        /// Default singleton instance of <c>BasicMessenger</c>.
+        /// Default instance of <c>BasicMessenger</c>.
         /// </summary>
+        /// <remarks>
+        /// BasicMessenger is not a singleton class, and this property exists
+        /// for convenience.
+        /// </remarks>
         public static BasicMessenger Default
         {
             get

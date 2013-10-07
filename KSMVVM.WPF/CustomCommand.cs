@@ -17,8 +17,8 @@ namespace KSMVVM.WPF
     /// <list type="bullet">
     /// <item>
     ///     <descripton>
-    ///     BasicCommand implements ICommand.CanExecuteChanged with a hack
-    ///     that may cause performance problems.
+    ///     CustomCommand requires you to call <c>TriggerCanExecuteChanged</c>
+    ///     when CanExecute's value changes.
     ///     </descripton>
     /// </item>
     /// 
