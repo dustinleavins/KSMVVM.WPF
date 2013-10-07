@@ -57,6 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\properties\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
     <Compile Include="BasicCommandTests.cs" />
     <Compile Include="BasicMessengerTests.cs" />
     <Compile Include="CustomCommandTests.cs" />

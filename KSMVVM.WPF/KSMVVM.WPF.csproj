@@ -44,6 +44,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\properties\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
     <Compile Include="BasicCommand.cs" />
     <Compile Include="CustomCommand.cs" />
     <Compile Include="IAppNavigationService.cs" />
