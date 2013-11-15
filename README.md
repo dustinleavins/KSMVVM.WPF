@@ -16,6 +16,10 @@ KSMVVM.WPF is a work-in-progress.
 
 [KSMVVM.WPF is on NuGet](https://www.nuget.org/packages/KSMVVM.WPF/) and should be compatible with .NET 4.0 and 4.5 solutions. Just add it to your WPF project; there is no additional setup.
 
+I wrote a few 'getting started' blog posts that walk you through using KSMVVM.WPF in an existing project.
+* [Getting Started with KSMVVM.WPF](http://leavinsprogramming.blogspot.com/2013/11/getting-started-with-ksmvvmwpf.html)
+* [Getting Started with KSMVVM.WPF Part 2: Messaging](http://leavinsprogramming.blogspot.com/2013/11/getting-started-with-ksmvvmwpf-part-2.html)
+
 If you want to build the KSMVVM.WPF solution, it uses Visual Studio's "NuGet Package Restore" feature so it should automatically pull NUnit (used for unit testing) for you.
 
 ## Example Project
