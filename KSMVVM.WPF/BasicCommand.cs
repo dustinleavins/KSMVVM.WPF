@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2013 Dustin Leavins
+﻿// Copyright (c) 2013, 2014 Dustin Leavins
 // See the file 'LICENSE.txt' for copying permission.
 using System;
 using System.Collections.Generic;
