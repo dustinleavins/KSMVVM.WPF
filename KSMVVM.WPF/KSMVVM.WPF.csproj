@@ -53,6 +53,7 @@
     <Compile Include="Messaging\BasicMessenger.cs" />
     <Compile Include="PageNavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyCommand.cs" />
     <Compile Include="Testing\MockAppNavigationService.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="ViewModel\ViewModelBaseOfT.cs" />
