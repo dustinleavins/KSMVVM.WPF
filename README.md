@@ -1,8 +1,8 @@
-# KSMVVM - Kinda Small MVVM Framework (WPF)
+# KSMVVM - Kinda Small MVVM Toolkit (WPF)
 
-There are plenty of MVVM frameworks for WPF, and many of those are nano/micro frameworks. So, why make another?
+There are plenty of MVVM toolkits & frameworks for WPF, and many of those are minimal. So, why make another?
 
-This particular framework is designed for helping devs convert code-behind projects to MVVM. So it's a little different because of this.
+This particular toolkit is designed for helping devs convert code-behind projects to MVVM. So it's a little different because of this.
 
 Here are some bullet points.
 
