@@ -57,11 +57,41 @@ namespace KSMVVM.WPF.Tests
                 });
             
             target.BackingCommand = backingCommand;
-            backingCommand.Execute("Data");
+            target.Execute("Data");
             Assert.IsTrue(valueToCheck);
             
-            backingCommand.Execute(null);
+            target.Execute(null);
             Assert.IsFalse(valueToCheck);
+        }
+        
+        [Test]
+        public void TriggerCanExecuteChangedTest()
+        {
+            bool triggeredChange = false;
+            CustomCommand backingCommand = new CustomCommand();
+            target.BackingCommand = backingCommand;
+            
+            target.CanExecuteChanged += (object sender, EventArgs e) =>
+            {
+                triggeredChange = true;
+            };
+            
+            backingCommand.TriggerCanExecuteChanged();
+            Assert.IsTrue(triggeredChange);
+        }
+        
+        [Test]
+        public void BackingCommandTest()
+        {
+            ICommand backingCommand = new CustomCommand();
+            target.BackingCommand = backingCommand;
+            Assert.IsNotNull(target.BackingCommand);
+            
+            target.BackingCommand = null;
+            Assert.IsNull(target.BackingCommand);
+            
+            Assert.IsFalse(target.CanExecute(null));
+            target.Execute(null);
         }
     }
 }

@@ -29,7 +29,12 @@ namespace KSMVVM.WPF.Tests
             target.Send(messageId);
 
             Assert.IsFalse(calledAction);
-
+        }
+        
+        [Test]
+        public void DefaultInstanceTest()
+        {
+            Assert.IsNotNull(BasicMessenger.Default);
         }
     }
 }

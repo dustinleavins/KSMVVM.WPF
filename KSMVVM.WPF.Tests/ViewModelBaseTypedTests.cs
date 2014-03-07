@@ -8,6 +8,18 @@ namespace KSMVVM.WPF.Tests
     public class ViewModelBaseTypedTests
     {
         [Test]
+        public void ConstructorTest()
+        {
+            TargetStruct data = new TargetStruct()
+            {
+                Name = "Test"
+            };
+            
+            ViewModelBase<TargetStruct> target = new TargetViewModel(data);
+            Assert.AreEqual(target.Model.Name, data.Name);
+        }
+        
+        [Test]
         public void ModelTest()
         {
             bool propertyChanged = false;
@@ -31,6 +43,15 @@ namespace KSMVVM.WPF.Tests
         
         private sealed class TargetViewModel : ViewModelBase<TargetStruct>
         {
+            public TargetViewModel() : base()
+            {
+                
+            }
+            
+            public TargetViewModel(TargetStruct model) : base(model)
+            {
+                
+            }
         }
         
         private struct TargetStruct

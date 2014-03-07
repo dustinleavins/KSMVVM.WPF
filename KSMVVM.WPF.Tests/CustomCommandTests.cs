@@ -39,5 +39,30 @@ namespace KSMVVM.WPF.Tests
             Assert.IsTrue(target.CanExecute(null));
             Assert.IsTrue(ranCommand);
         }
+        
+        [Test]
+        public void TriggerCanExecuteChangedTest()
+        {
+            bool triggeredUpdate = false;
+            CustomCommand target = new CustomCommand();
+            
+            target.CanExecuteChanged += (object sender, EventArgs e) =>
+            {
+                triggeredUpdate = true;
+            };
+            
+            target.TriggerCanExecuteChanged();
+            Assert.IsTrue(triggeredUpdate);
+        }
+        
+        [Test]
+        public void DefaultConstructorTest()
+        {
+            ICommand target = new CustomCommand();
+            
+            // These two method calls should not throw exceptions
+            target.CanExecute(null);
+            target.Execute(null);
+        }
     }
 }
