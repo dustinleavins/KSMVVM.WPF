@@ -32,7 +32,7 @@ namespace KSMVVM.WPF.ViewModel
             }
             set
             {
-                if (!modelData.Equals(value))
+                if (!Object.Equals(modelData, value))
                 {
                     modelData = value;
                     OnPropertyChanged("Model");

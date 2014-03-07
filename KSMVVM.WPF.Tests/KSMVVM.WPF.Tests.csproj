@@ -69,6 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProxyCommandTests.cs" />
     <Compile Include="ViewModelBaseTests.cs" />
+    <Compile Include="ViewModelBaseTypedTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KSMVVM.WPF\KSMVVM.WPF.csproj">
