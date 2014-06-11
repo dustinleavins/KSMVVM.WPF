@@ -42,3 +42,5 @@ UpgradeLog*.XML
 Thumbs.db
 
 Desktop.ini
+
+*.sdsettings
